@@ -14,19 +14,18 @@ LiteLLM and aisuite are unified wrappers: one call, one model, a consistent inte
 
 ## Supported providers
 
-| Provider   | Default Model        | Environment Variable |
-|------------|----------------------|----------------------|
-| OpenAI     | gpt-4o               | OPENAI_API_KEY       |
-| Anthropic  | claude-sonnet-4-5    | ANTHROPIC_API_KEY    |
-| Google     | gemini-2.5-flash     | GOOGLE_API_KEY       |
-| Perplexity | sonar                | PERPLEXITY_API_KEY   |
-| DeepSeek   | deepseek-chat        | DEEPSEEK_API_KEY     |
-| xAI        | grok-2-latest        | XAI_API_KEY          |
-| Mistral    | mistral-large-latest | MISTRAL_API_KEY      |
+| Provider   | Default Model               | Environment Variable |
+|------------|-----------------------------|----------------------|
+| OpenAI     | gpt-4o                      | OPENAI_API_KEY       |
+| Anthropic  | claude-sonnet-4-5           | ANTHROPIC_API_KEY    |
+| Google     | gemini-2.5-flash            | GOOGLE_API_KEY       |
+| Perplexity | sonar                       | PERPLEXITY_API_KEY   |
+| DeepSeek   | deepseek-chat               | DEEPSEEK_API_KEY     |
+| xAI        | grok-4-1-fast-non-reasoning | XAI_API_KEY          |
+| Mistral    | mistral-large-latest        | MISTRAL_API_KEY      |
 
 Only providers whose API key is set will be called. Missing keys are skipped silently.
-
-Each provider exposes one sensible default model. To use a different model on the same provider, pass it via the `models` argument to `run()` — see the library quickstart below. fanllm does not maintain a catalogue of every model each provider offers; that's a deliberate scope choice.
+A note on model defaults. The default model for each provider is chosen to be a sensible general-purpose option at a reasonable price point. Provider model IDs change over time — a model that's current today may be renamed or deprecated months from now. If you hit an error like HTTP 400 on a specific provider, check that provider's current model list and either open an issue or override the default via the models argument to run() (see the library quickstart below). fanllm deliberately does not maintain a catalogue of every model each provider offers; that's a scope choice to keep the tool small and readable.
 
 ## Installation
 

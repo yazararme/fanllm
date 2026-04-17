@@ -8,7 +8,7 @@ from fanllm.providers._base import (
 from fanllm.types import LLMResult
 
 NAME = "xai"
-DEFAULT_MODEL = "grok-2-latest"
+DEFAULT_MODEL = "grok-4-1-fast-non-reasoning"
 API_KEY_ENV_VAR = "XAI_API_KEY"
 BASE_URL = "https://api.x.ai/v1/chat/completions"
 
