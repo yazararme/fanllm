@@ -208,3 +208,6 @@ __marimo__/
 
 # Claude Code internal state
 .claude/
+
+# Local scratch / debugging scripts
+try_it.py
