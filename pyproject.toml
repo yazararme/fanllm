@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [{ name = "Yazar", email = "yazararme@gmail.com" }]
-keywords = ["llm", "openai", "anthropic", "google", "perplexity", "deepseek", "comparison"]
+keywords = ["llm", "openai", "anthropic", "google", "perplexity", "deepseek", "grok", "xai", "mistral", "comparison"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
