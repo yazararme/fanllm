@@ -6,7 +6,7 @@ Fire one prompt at multiple LLMs in parallel. Compare responses side by side.
 
 fanllm is a small Python library and CLI that sends the same prompt to seven hosted LLM providers concurrently and returns the results as structured objects. Use it when you want to see how different models actually respond to the same input. No router, no proxy, no framework — just the engine.
 
-![fanllm terminal output](docs/demo.png)
+![fanllm terminal output](https://raw.githubusercontent.com/yazararme/fanllm/main/docs/demo.png)
 
 ## Why fanllm exists
 
