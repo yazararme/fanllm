@@ -215,3 +215,8 @@ try_it.py
 # macOS Finder metadata
 .DS_Store
 **/.DS_Store
+
+# Build artefacts
+dist/
+build/
+*.egg-info/
