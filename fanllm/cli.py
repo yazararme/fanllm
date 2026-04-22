@@ -118,14 +118,18 @@ def main() -> None:
         sys.exit(1)
 
     start = time.perf_counter()
-    results = asyncio.run(
-        fanllm.run(
-            args.prompt,
-            providers=providers,
-            system_prompt=args.system,
-            timeout=args.timeout,
+    try:
+        results = asyncio.run(
+            fanllm.run(
+                args.prompt,
+                providers=providers,
+                system_prompt=args.system,
+                timeout=args.timeout,
+            )
         )
-    )
+    except KeyboardInterrupt:
+        print("Interrupted.", file=sys.stderr)
+        sys.exit(130)
     elapsed = time.perf_counter() - start
 
     if args.as_json:
